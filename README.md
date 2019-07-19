@@ -1,3 +1,3 @@
 # pysoma
 
-This is the first test of using a Python package to control SOMA shades.
+Very simple Python wrapper for the HTTP API provided by SOMA Connect.

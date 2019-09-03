@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pysoma",
-    version="0.0.5",
+    version="0.0.8",
     author="Wazombi Labs",
     author_email="labs@wazombi.com",
     description="A simple package for controlling SOMA devices",

@@ -41,7 +41,7 @@ class SomaApi:
         if(self.soma_connect_version.split('.')[0] == '3'):
             return requests.get(url = "http://"+self.soma_connect_ip+":"+str(self.soma_connect_port)+"/set_shade_position?mac="+mac+"&pos="+str(position), timeout = self.timeout).json()
         else:
-            return requests.get(url = "http://"+self.soma_connect_ip+":"+str(self.soma_connect_port)+"/set_shade_position/"+mac+"/="+str(position), timeout = self.timeout).json()
+            return requests.get(url = "http://"+self.soma_connect_ip+":"+str(self.soma_connect_port)+"/set_shade_position/"+mac+"/"+str(position), timeout = self.timeout).json()
 
     def get_battery_level(self, mac):
         if(self.soma_connect_version.split('.')[0] == '3'):

@@ -5,13 +5,13 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pysoma",
-    version="0.0.12",
+    version="0.0.13",
     author="Wazombi Labs",
     author_email="labs@wazombi.com",
     description="A simple package for controlling SOMA devices",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="http://wazombi.com",
+    url="https://github.com/ratsept/pysoma",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

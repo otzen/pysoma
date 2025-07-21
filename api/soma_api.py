@@ -51,10 +51,6 @@ class SomaApi:
 
     def get_light_level(self, mac):
         if(self.soma_connect_version.split('.')[0] == '3'):
-            # Acording to doc this command is not suported by this version, so fake a decent json error response.
-            return { 'mac': mac,
-                     'msg': 'NOTSUPORTED',
-                     'result': 'error',
-                     'version': self.soma_connect_version }
+            return requests.get(url = "http://"+self.soma_connect_ip+":"+str(self.soma_connect_port)+"/get_light_level?mac="+mac, timeout = self.timeout).json()
         else:
             return requests.get(url = "http://"+self.soma_connect_ip+":"+str(self.soma_connect_port)+"/get_light_level/"+mac, timeout = self.timeout).json()
